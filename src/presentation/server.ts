@@ -7,7 +7,6 @@ interface Options {
   public_path?: string;
 }
 
-
 export class Server {
 
   public readonly app = express();
@@ -22,8 +21,6 @@ export class Server {
     this.publicPath = public_path;
     this.routes = routes;
   }
-
-  
   
   async start() {
     
