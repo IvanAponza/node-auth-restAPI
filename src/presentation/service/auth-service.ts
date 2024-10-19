@@ -60,7 +60,7 @@ export class AuthService {
             const { password, ...userEntity} = UserEntity.fromObject(user);
 
             //generamos token con las options deseadas
-            const token = await JwtAuth.generateToken({id: user.id, email: user.email});
+            const token = await JwtAuth.generateToken({ id: user.id });
             if(!token)throw CustomError.InternalServer('Error while creating JWT')
 
             //Regresa user

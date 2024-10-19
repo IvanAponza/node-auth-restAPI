@@ -8,7 +8,7 @@ services:
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: mongo-user
-      MONGO_INITDB_ROOT_PASSWORD: 123456
+      MONGO_INITDB_ROOT_PASSWORD: ic123456
     volumes:
       - ./mongo:/data/db
     ports:

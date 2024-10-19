@@ -17,6 +17,9 @@ export const envs = {
 
   WEBSERVICE_URL: get('WEBSERVICE_URL').required().asString(),
 
+  SEND_EMAIL: get('SEND_EMAIL').default('false').asBool(),
+
+
 }
 
 

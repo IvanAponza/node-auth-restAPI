@@ -1,7 +1,4 @@
 import nodemailer, {Transporter} from 'nodemailer';
-import { JwtAuth } from '../../config';
-import { CustomError } from '../../domain';
-import { UserModel } from '../../data';
 
 
 export interface SendMailOptions {
@@ -26,6 +23,7 @@ export class EmailService {
         mailerService: string,
         mailerEmail: string,
         mailerSecretKey: string,
+        private readonly postToProvider: boolean, //No enviar email
     ){
         //inicializamos el transporter
         this.transporter = nodemailer.createTransport({
@@ -44,6 +42,8 @@ export class EmailService {
         const { to, subject, html, attachements=[] } = options;
 
         try {
+
+            if(!this.postToProvider) return true; // no quiero enviar correo
 
             const sendInformation = await this.transporter.sendMail({
                 to: to,
