@@ -30,4 +30,13 @@ const productSchema = new mongoose.Schema({
     },
 });
 
+//Serializar schema - para use populate
+productSchema.set('toJSON', {
+    virtuals: true,
+    versionKey: false,
+    transform: function (doc, ret, options) {
+        delete ret._id
+    },
+})
+
 export const ProductModel = mongoose.model( 'Product', productSchema );

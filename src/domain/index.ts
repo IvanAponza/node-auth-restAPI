@@ -11,3 +11,5 @@ export * from './dtos/auth/login-user.dto';
 export * from './dtos/category/create-category.dto';
 
 export * from './dtos/pagination-shared/pagiantion.dto';
+
+export * from './dtos/product/create-product.dto';
