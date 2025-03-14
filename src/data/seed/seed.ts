@@ -32,7 +32,6 @@ async function main() {
         UserModel.deleteMany(),
         CategoryModel.deleteMany(),
         ProductModel.deleteMany(),
-
     ]);
   
     //1. Crear Usuarios
