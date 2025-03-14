@@ -22,5 +22,11 @@ export const envs = {
 
 }
 
+//Como clase
+// export class Envs {
+
+//   static PORT = get('PORT').required().asPortNumber()
+// }
+
 
 
