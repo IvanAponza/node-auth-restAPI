@@ -48,7 +48,7 @@ export class AuthService {
     public async login(loginUserDto: LoginUserDto){
 
         try {
-            //Verificar si existe el usuario
+            //Verificar que exista el usuario
             const user = await UserModel.findOne({email: loginUserDto.email});
             if(!user) throw CustomError.badRequest('User not exist');
             
@@ -99,7 +99,7 @@ export class AuthService {
         const isSent = await this.emailService.sendEmail(options);
         if(!isSent) throw CustomError.InternalServer('Error sending email');
 
-        //todo ok
+        //Si todo ok
         return true;
     }
 
