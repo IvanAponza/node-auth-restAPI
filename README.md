@@ -1,8 +1,6 @@
 # Rest Project + TypeScript
 
-Este proyecto previamente inicializado tiene todo lo necesario para trabajar con TypeScript, Express y Rest.
-
-Cada paso de su configuración ya se ha realizado previamente en el curso, por lo que solo es necesario clonar el proyecto y comenzar a trabajar.
+Repositorio API REST construida con Node.js, TypeScript, Express.js, MongoDB, JWT, Bcrypt y express-fileupload, que implementa un sistema completo de autenticación y gestión de recursos; está diseñada para ser escalable, mantenible y segura, ideal como backend para aplicaciones web modernas. La aplicación utiliza una arquitectura limpia y modular basada en capas (Domain, Data, Presentation) siguiendo principios de Clean Architecture.
 
 
 ## Instalación
